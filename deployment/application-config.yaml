@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  application.properties: |-
+    # custom mongo config for caching
+    quarkus.mongodb.connection-string=mongodb+srv://DXL-GR-PreProd-cachedb-user:ZvRGPo3ntSoprEgF@dxl-gr-preprod-nuler.mongodb.net
+kind: ConfigMap
+metadata:
+  labels:
+    app: mongoexport-generator-pod
+    environment: dxl-dev-gr
+  name: application-config-mongoexport-generator
+  namespace: dxl-dev-gr
